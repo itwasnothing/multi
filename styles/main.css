@@ -14,6 +14,9 @@ body {
 }
 
 /* 레이아웃 */
+/* float vs position */
+/* flex vs grid */
+
 .container {
   background-color: var(--yellow);
 }
@@ -38,12 +41,34 @@ body {
   height: 10vh;
 }
 
+/* float layout */
 .main {
   background-color: skyblue;
+  /* overflow: hidden; */
+  /* bfc */
+  display: flow-root;
+  padding: 30px 15px;
+  min-height: 450px;
 }
 
 .group {
-  height: 20vh;
+  float: left;
+  margin-inline: 15px;
+}
+
+.group1 {
+  background-color: tomato;
+  /* position: relative;
+  right: 50px; */
+  width: 250px;
+}
+.group2 {
+  background-color: violet;
+  width: 380px;
+}
+.group3 {
+  background-color: teal;
+  width: 190px;
 }
 
 .slogan {
