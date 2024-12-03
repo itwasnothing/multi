@@ -46,29 +46,30 @@ body {
   background-color: skyblue;
   /* overflow: hidden; */
   /* bfc */
-  display: flow-root;
-  padding: 30px 15px;
   min-height: 450px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  padding: 30px 0;
 }
 
 .group {
-  float: left;
-  margin-inline: 15px;
+  flex: 0 1 auto;
 }
 
 .group1 {
   background-color: tomato;
-  /* position: relative;
-  right: 50px; */
-  width: 250px;
+  width: 380px;
 }
 .group2 {
   background-color: violet;
-  width: 380px;
+  width: 190px;
 }
 .group3 {
   background-color: teal;
-  width: 190px;
+  width: 250px;
+
+  order: -1;
 }
 
 .slogan {
