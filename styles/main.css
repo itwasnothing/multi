@@ -25,6 +25,7 @@
   position: absolute;
   top: 38px;
   left: 60px;
+  z-index: 1;
 }
 
 /* 텍스트 링크 모음 - 멤버서비스 */
@@ -32,7 +33,7 @@
   font-size: 0px;
   text-align: end;
   padding: 8px;
-  position: relative;
+  translate: 12px 0;
   /* right: -12px; */
 
   li {
@@ -52,7 +53,7 @@
 
 /* 메인메뉴 */
 .navigation {
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 .menu {
@@ -64,13 +65,14 @@
   > li {
     float: left;
     height: 100%;
+    position: relative;
 
     .menu-button {
       color: var(--white);
       font-size: 0.9375rem;
       font-weight: 700;
       background: transparent;
-      padding: 0 15px;
+      padding: 0 23px;
       height: 100%;
       line-height: 45px;
       display: block;
@@ -91,12 +93,36 @@
       display: block;
       border-top: 2px solid var(--black);
     }
+
+    .sub-menu {
+      display: block;
+    }
+  }
+
+  /* 특정 child만 컨트롤 */
+  > li:nth-child(n + 4) .sub-menu {
+    right: 0;
   }
 
   .sub-menu {
-    background-color: violet;
     position: absolute;
-    /* display: none; */
+    top: 47px;
+    display: none;
+    white-space: nowrap;
+
+    li {
+      display: inline-block;
+      margin-right: 0.5em;
+    }
+
+    a {
+      display: inline-block;
+      padding: 0.5em;
+    }
+
+    span {
+      margin-right: 0.5em;
+    }
   }
 }
 
