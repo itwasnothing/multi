@@ -3,6 +3,7 @@
 @import "./base.css";
 @import "./utils.css";
 @import "./animation.css";
+@import "./components.css";
 /* 레이아웃 */
 /* float vs position */
 /* flex vs grid */
@@ -172,16 +173,17 @@
   }
 }
 
-/* flex layout */
+/* 메인 콘텐츠 */
 .main {
-  background-color: skyblue;
+  background-color: var(--white);
   /* overflow: hidden; */
   /* bfc */
   min-height: 450px;
   display: flex;
-  flex-flow: row;
+  flex-flow: row nowrap;
   justify-content: space-evenly;
   padding: 30px 0;
+  border-radius: 15px 15px 0 0;
 }
 
 .group {
@@ -189,18 +191,82 @@
 }
 
 .group1 {
-  background-color: tomato;
-  width: 380px;
+  width: 250px;
 }
 .group2 {
-  background-color: violet;
-  width: 190px;
+  width: 380px;
 }
 .group3 {
-  background-color: teal;
-  width: 250px;
+  width: 190px;
 
   /* order: -1; */
+}
+
+/* 로그인 */
+.login {
+  --spacing: 10px;
+
+  background: radial-gradient(
+    circle at right top,
+    var(--orange),
+    var(--orangered)
+  );
+  border-radius: 5px;
+  padding: 15px;
+
+  box-shadow: 5px 5px 0 2px var(--gray-700);
+
+  .headline {
+    color: var(--yellow);
+  }
+
+  .login-form,
+  .login-member {
+    background-color: var(--white);
+  }
+
+  .login-form {
+    margin-top: var(--spacing);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 6px;
+    padding: var(--spacing) var(--spacing) 0 var(--spacing);
+    position: relative;
+
+    .form-input {
+      width: 145px;
+    }
+
+    .button-fill {
+      /* --size: 50px;
+      width: var(--size);
+      height: var(--size); */
+
+      width: 50px;
+      aspect-ratio: 1/1;
+      position: absolute;
+      top: var(--spacing);
+      right: var(--spacing);
+    }
+  }
+
+  .divider {
+    height: 21px;
+    background-color: var(--white);
+    border: 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: var(--spacing);
+      width: calc(100% - var(--spacing) * 2);
+      height: 1px;
+      background-color: var(--border-color);
+    }
+  }
 }
 
 .slogan {
