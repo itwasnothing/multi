@@ -279,6 +279,30 @@
   }
 }
 
+/* .term {
+  background-color: var(--gray-400);
+  padding: 20px;
+  border-radius: 10px;
+  ul {
+    display: flex;
+    flex-flow: column nowrap;
+    float: ri;
+    li {
+      
+      border: 1px solid;
+      .descript {
+        color: blue;
+      }
+    }
+    > li:nth-child(4n + 1) img {
+      float: left;
+    }
+    > li:nth-child(4n + 3) img {
+      float: right;
+    }
+  }
+} */
+
 .slogan {
   background-color: lightgreen;
   height: 10vh;
