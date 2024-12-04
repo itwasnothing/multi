@@ -200,7 +200,7 @@
   background-color: teal;
   width: 250px;
 
-  order: -1;
+  /* order: -1; */
 }
 
 .slogan {
