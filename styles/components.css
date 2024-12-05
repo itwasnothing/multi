@@ -56,3 +56,14 @@
     color: var(--orangered);
   }
 }
+
+/* 더보기 링크 */
+.more {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+
+  span {
+    color: var(--green);
+  }
+}
