@@ -297,33 +297,33 @@
     display: contents;
   }
 
-  dl div:nth-child(even) {
-    dt {
-      float: left;
-    }
+  div {
+    display: grid;
+    column-gap: 15px;
+    row-gap: 5px;
+  }
 
-    dd:nth-of-type(1) {
-      float: right;
-    }
-    dd:nth-of-type(2) {
-      float: left;
-    }
+  dl div:nth-child(odd) {
+    grid-template-columns: 60px 1fr;
+    grid-template-areas: "thumbnail subject" "thumbnail brief";
+  }
+
+  dl div:nth-child(even) {
+    grid-template-columns: 1fr 60px;
+    grid-template-areas: "subject thumbnail" "brief thumbnail";
   }
 
   dt {
-    width: 140px;
-    float: right;
     font-weight: 500;
     color: var(--blue);
-    margin-bottom: 5px;
+    grid-area: subject;
   }
 
   div dd:nth-of-type(1) {
-    float: left;
+    grid-area: thumbnail;
   }
   div dd:nth-of-type(2) {
-    float: right;
-    width: 140px;
+    grid-area: brief;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
