@@ -13,7 +13,7 @@
   border-bottom: 2px solid var(--black); */
 
   label {
-    width: 4em;
+    /* width: 4em; */
     /* 영역 축소막기 */
     flex-shrink: 0;
   }
@@ -33,8 +33,9 @@
 .button-fill {
   background-color: var(--orangered);
   color: var(--white);
-  padding: 6px;
+  padding: 0;
   border: 0;
+  height: 22px;
   border-radius: 3px;
   font-size: 0.75rem;
 }

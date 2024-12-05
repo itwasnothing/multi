@@ -227,6 +227,10 @@
       width: 145px;
     }
 
+    label {
+      width: 4em;
+    }
+
     .button-fill {
       width: 50px;
       aspect-ratio: 1/1;
@@ -281,9 +285,7 @@
 
 /* 웹관련용어 */
 .term {
-  border: 1px solid var(--gray-700);
   border-radius: 5px;
-  background: var(--gray-400) linear-gradient(var(--gray-600), var(--gray-400));
   padding: 15px;
   display: flex;
   flex-flow: column nowrap;
@@ -330,7 +332,6 @@
     overflow: hidden;
   }
 }
-
 /* .term {
   background-color: var(--gray-400);
   padding: 20px;
@@ -354,6 +355,41 @@
     }
   }
 } */
+
+/* 검색폼 */
+.search {
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px;
+
+  /* flex-flow: column nowrap;
+  position: relative; */
+
+  form {
+    display: flex;
+    gap: 10px;
+
+    div {
+      flex-grow: 1;
+    }
+
+    label {
+      margin-right: 10px;
+
+      span {
+        margin-right: 5px;
+      }
+    }
+
+    input {
+      border-radius: 3px;
+    }
+
+    .button-fill {
+      background: var(--black);
+      padding-inline: 1em;
+    }
+  }
+}
 
 .slogan {
   background-color: lightgreen;
