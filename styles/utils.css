@@ -39,18 +39,3 @@
 .accent-color {
   color: var(--orangered);
 }
-
-.button-sprite {
-  height: 18px;
-  width: 19px;
-  border: 0;
-  padding: 0;
-  background: url("./../assets/back_forward.png") no-repeat;
-  border-color: var(--white);
-}
-.button-prev {
-  background-position: 0%;
-}
-.button-next {
-  background-position: 100%;
-}
