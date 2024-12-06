@@ -577,6 +577,50 @@
   }
 }
 
+/* 신규이벤트 */
+.event {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+  height: 200px;
+  justify-content: space-between;
+
+  .button-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+
+    .button-sprite {
+      height: 19px;
+      width: 19px;
+      background-image: url("./../assets/back_forward.png");
+      border-color: var(--white);
+    }
+    .button-prev {
+      background-position: 10%;
+    }
+    .button-next {
+      background-position: 100%;
+    }
+  }
+
+  figure {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    text-align: center;
+
+    img {
+      box-shadow: 5px 5px 0 3px var(--gray-700);
+    }
+
+    figcaption {
+      margin-top: 15px;
+    }
+  }
+}
+
 .slogan {
   background-color: lightgreen;
   height: 10vh;

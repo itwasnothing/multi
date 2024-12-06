@@ -24,3 +24,15 @@
   border: 1px solid var(--gray-700);
   background: var(--gray-400) linear-gradient(var(--gray-600), var(--gray-400));
 }
+
+.rounded-sm {
+  border-radius: 5px;
+}
+
+.spaing-sm {
+  padding: 10px;
+}
+
+.accent-color {
+  color: var(--orangered);
+}
