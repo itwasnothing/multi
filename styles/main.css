@@ -557,7 +557,7 @@
     em {
       width: 9px;
       height: 11px;
-      background-color: pink;
+      background-color: transparent;
       background-image: url("./../assets/rank.png");
       margin-left: auto;
     }
@@ -609,13 +609,10 @@
     }
   }
 }
-
 /* .event {
-  position: relative;
   display: flex;
-  flex-flow: row nowrap;
-  gap: 15px;
-  height: 200px;
+  flex-flow: row wrap;
+  gap: 10px;
   justify-content: space-between;
 
   .button-wrapper {
@@ -623,37 +620,73 @@
     flex-flow: row nowrap;
     gap: 5px;
 
-    .button-sprite {
-      height: 18px;
-      width: 19px;
-      border: 0;
-      padding: 0;
-      background: url("./../assets/back_forward.png") no-repeat;
-      border-color: var(--white);
-    }
-    .button-prev {
-      background-position: 0%;
-    }
-    .button-next {
-      background-position: 100%;
-    }
-  }
-
-  figure {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    text-align: center;
-
-    img {
-      box-shadow: 5px 5px 0 3px var(--gray-700);
+  .event-thumbnail {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+    img{
+      box-shadow: 5px 5px 0 0 var(--gray-400);
     }
 
-    figcaption {
-      margin-top: 15px;
+    figcaption{
+      line-height: 1.5;
+
+      em{
+        font-style: normal;
+      }
     }
   }
 } */
+
+/* 관련사이트 */
+.related {
+  --height: 25px;
+
+  border-top: 1px solid var(--gray-600);
+  padding-top: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  /* padding-top: 20px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gray-700);
+  } */
+
+  .related-list {
+    background-color: var(--white);
+    border-radius: 5px;
+    border: 1px solid var(--gray-600);
+    height: calc(var(--height) + 2px);
+    overflow: hidden;
+    transition: height, padding 2s, 1s ease-in-out;
+
+    li {
+      height: var(--height);
+      padding: 2px;
+    }
+    a {
+      display: block;
+      line-height: calc(var(--height) - 4px);
+      text-indent: 1.5em;
+    }
+
+    &:hover,
+    &:focus {
+      padding: 10px 0;
+      height: 147px;
+      /* height: auto; */
+    }
+  }
+}
 
 .slogan {
   background-color: lightgreen;
